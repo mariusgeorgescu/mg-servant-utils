@@ -1,15 +1,15 @@
 cabal-version:   3.0
 name:            mg-servant-utils
 version:         0.1.0.2
-
 synopsis:        Utility modules for building Servant-based web services
-description:     A collection of utility modules for Servant web services including authentication, CORS, health checks, and common handlers.
+description:
+  A collection of utility modules for Servant web services including authentication, CORS, health checks, and common handlers.
+
 homepage:        https://github.com/mariusgeorgescu/mg-servant-utils
 license:         Apache-2.0
 license-file:    LICENSE
 author:          Marius Georgescu
 maintainer:      georgescumarius@live.com
-
 category:        Web
 build-type:      Simple
 extra-doc-files: README.md
@@ -22,21 +22,22 @@ library
   exposed-modules:
     MGServantUtils.Auth
     MGServantUtils.CORS
+    MGServantUtils.Handlers
     MGServantUtils.ServiceProbe
     MGServantUtils.Utils
 
   build-depends:
-    , aeson >= 2.0
-    , base >= 4.14 && < 5
-    , bytestring >= 0.11
-    , http-types >= 0.12
-    , servant >= 0.19
-    , servant-server >= 0.19
-    , swagger2 >= 2.8
-    , text >= 2.0
-    , time >= 1.9
-    , wai >= 3.2
-    , wai-cors >= 0.2
+    , aeson           >=2.0
+    , base            >=4.14 && <5
+    , bytestring      >=0.11
+    , http-types      >=0.12
+    , servant         >=0.19
+    , servant-server  >=0.19
+    , swagger2        >=2.8
+    , text            >=2.0
+    , time            >=1.9
+    , wai             >=3.2
+    , wai-cors        >=0.2
 
   hs-source-dirs:     src
   default-language:   GHC2021
@@ -53,4 +54,3 @@ test-suite mg-servant-utils-test
   build-depends:
     , base
     , mg-servant-utils
-
