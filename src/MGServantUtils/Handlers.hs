@@ -12,8 +12,3 @@ handleException e = do
   liftIO $ putStrLn $ "Exception: \n" <> show e
   throwError err400 {errBody = BL8.pack (show e)}
 
--- | Specific handler for GYTxMonadException (for backward compatibility)
--- This can be used in projects that use GeniusYield
-handleGYTxMonadException :: (Exception e, Show e) => e -> Servant.Handler a
-handleGYTxMonadException = handleException
-

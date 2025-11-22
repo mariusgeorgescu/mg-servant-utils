@@ -1,6 +1,6 @@
 cabal-version:   3.0
 name:            mg-servant-utils
-version:         0.1.0.1
+version:         0.1.0.2
 
 synopsis:        Utility modules for building Servant-based web services
 description:     A collection of utility modules for Servant web services including authentication, CORS, health checks, and common handlers.
@@ -22,7 +22,6 @@ library
   exposed-modules:
     MGServantUtils.Auth
     MGServantUtils.CORS
-    MGServantUtils.Handlers
     MGServantUtils.ServiceProbe
     MGServantUtils.Utils
 
