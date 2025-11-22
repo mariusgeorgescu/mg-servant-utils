@@ -1,3 +1,5 @@
+{-# LANGUAGE DataKinds #-}
+
 module MGServantUtils.Auth where
 
 import Data.Maybe (fromMaybe)
